@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-full overflow-y-scroll;
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+    @apply antialiased bg-gray-200 bg-opacity-30
+    flex flex-col min-h-full;
+  }
+  #root {
+    @apply w-full h-full relative;
+  }
+  #app {
+    @apply w-full flex flex-col h-screen justify-between;
+  }
+  #wrap {
+    @apply w-full flex-1 mb-5;
+  }
+  footer {
+    @apply w-full text-center py-2 text-sm border-t
+    bg-gray-800 text-white text-opacity-75 border-black;
+  }
+  .playlist {
+    @apply w-full flex-1 overflow-y-scroll border-b border-gray-300;
+  }
+  .playlist ul {
+    @apply w-full h-auto m-0 p-0;
+  }
+  .playlist ul li {
+    @apply flex w-full py-2 px-3 text-sm items-center justify-between
+    cursor-pointer border-b border-gray-300;
+  }
+  .playlist-bottom {
+    @apply w-full flex items-center justify-between py-2;
+  }
+  .playlist-bottom .go-live {
+    @apply flex items-center px-3;
+  }
+  .playlist-bottom .go-live button {
+    @apply flex items-center px-4 py-1 rounded
+    text-white bg-red-600 bg-opacity-90 hover:bg-opacity-100;
+  }
+  .playlist-bottom .events {
+    @apply flex items-center;
+  }
+  .playlist-bottom .events button {
+    @apply block mr-4;
+  }
+  .activeVideo {
+    @apply text-red-600 font-semibold shadow;
+  }
+}
